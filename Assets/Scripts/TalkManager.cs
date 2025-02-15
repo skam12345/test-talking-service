@@ -29,6 +29,7 @@ public class TalkManager : MonoBehaviour
     private List<TalkData> shopList = new List<TalkData>();
     private bool isInitialized = false;
     private bool isTyping = false;
+    private bool isChoice = false;
 
     void Awake()
     {
@@ -133,14 +134,19 @@ public class TalkManager : MonoBehaviour
 
     #region 대화 넘기기
     public void next()
-    {
+    {   
+        // 선택지가 떴을 때 다시 타이핑 효과 안나오게
+        if (isChoice) return; 
         // 타이핑 효과 진행중에 대화창 입력하면 문장 완성되는 기능
         if(isTyping)
         {
             isTyping = false;
             StopAllCoroutines();
             TypingCompleteSentence(shopList[index].getDialogue());
-            return;
+            if (shopList[index].getCondition() == null)
+            {
+                return;
+            }
         }
        
 
@@ -205,6 +211,7 @@ public class TalkManager : MonoBehaviour
                 copyButton.GetComponentInChildren<Text>().color = new Color(1.0f, 1.0f, 1.0f, 1.0f);
                 copyButton.GetComponentInChildren<Text>().fontSize = 20;
             }
+            isChoice = true;
         }
     }
     #endregion
@@ -230,6 +237,7 @@ public class TalkManager : MonoBehaviour
     #region 선택지 선택
     void SelectChocie(int index01)
     {
+        isChoice = false;
         DestroyChoice();
         index = shopList[index].getNextScene()[index01] - 1;
         StartCoroutine(CallSpriteImage(shopList[index].getFaceImage()));
