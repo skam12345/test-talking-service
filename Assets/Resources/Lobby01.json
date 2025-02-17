@@ -1,0 +1,30 @@
+{
+  "S0001": {
+    "FaceImage": "mawang",
+    "Character": "마왕",
+    "Dialogue": "오늘은 뭘 해 볼까?",
+    "Choice 1": null,
+    "Choice 1 Next Scene": null,
+    "Choice 2": null,
+    "Choice 2 Next Scene": null,
+    "Choice 3": null,
+    "Choice 3 Next Scene": null,
+    "Default Next Scene": "S0002",
+    "Event Trigger": "EV01/EV02",
+    "Sfx": null
+  },
+  "S0002": {
+    "FaceImage": null,
+    "Character": null,
+    "Dialogue": null,
+    "Choice 1": null,
+    "Choice 1 Next Scene": null,
+    "Choice 2": null,
+    "Choice 2 Next Scene": null,
+    "Choice 3": null,
+    "Choice 3 Next Scene": null,
+    "Default Next Scene": null,
+    "Event Trigger": null,
+    "Sfx": null
+  }
+}

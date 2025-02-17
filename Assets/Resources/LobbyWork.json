@@ -1,0 +1,30 @@
+{
+  "S0001": {
+    "FaceImage": "mawang",
+    "Character": "마왕",
+    "Dialogue": "무슨 일을 할까?",
+    "Choice_1": null,
+    "Choice_1_Next_Scene": null,
+    "Choice_2": null,
+    "Choice_2_Next_Scene": null,
+    "Choice_3": null,
+    "Choice_3_Next_Scene": null,
+    "Default_Next_Scene": "S0002",
+    "Event_Trigger": "EV04/EV05",
+    "Sfx": null
+  },
+  "S0002": {
+    "FaceImage": null,
+    "Character": null,
+    "Dialogue": null,
+    "Choice_1": null,
+    "Choice_1_Next_Scene": null,
+    "Choice_2": null,
+    "Choice_2_Next_Scene": null,
+    "Choice_3": null,
+    "Choice_3_Next_Scene": null,
+    "Default_Next_Scene": null,
+    "Event_Trigger": null,
+    "Sfx": null
+  }
+}
